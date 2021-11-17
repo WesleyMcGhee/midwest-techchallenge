@@ -169,6 +169,11 @@ body {
     font-size: 1.5rem;
   }
 }
+@media (max-width: 400px) {
+  .card {
+    height: 70vh;
+  }
+}
 .challenge-con {
   margin: 5vw 10vw;
 }
@@ -259,11 +264,12 @@ body {
   .text-side {
     width: 100%;
     height: inherit;
+    padding-bottom: 10vh;
   }
   .form-side {
     width: 100%;
     height: inherit;
-    padding-bottom: 5vh;
+    padding: 3vh 0;
   }
   .nav-right {
     background-color: #222222;
