@@ -36,6 +36,13 @@ export default function contact({ contactContent }) {
         body: JSON.stringify(body),
       });
       toast.success("Message posted to the DB!");
+      setChange({
+        fname: "",
+        lname: "",
+        email: "",
+        title: "",
+        message: "",
+      });
     } catch (err) {
       console.error(err.message);
       toast.error("Uh oh something went wrong.");
@@ -66,6 +73,7 @@ export default function contact({ contactContent }) {
                 type="text"
                 placeholder="First Name"
                 name="fname"
+                value={change.fname}
                 className="form-input half"
                 onChange={(e) => {
                   onChange(e);
@@ -75,6 +83,7 @@ export default function contact({ contactContent }) {
                 type="text"
                 placeholder="Last Name"
                 name="lname"
+                value={change.lname}
                 className="form-input half"
                 onChange={(e) => {
                   onChange(e);
@@ -84,6 +93,7 @@ export default function contact({ contactContent }) {
                 type="text"
                 placeholder="Title"
                 name="title"
+                value={change.title}
                 className="form-input half"
                 onChange={(e) => {
                   onChange(e);
@@ -93,6 +103,7 @@ export default function contact({ contactContent }) {
                 type="email"
                 placeholder="Email"
                 name="email"
+                value={change.email}
                 className="form-input half"
                 required
                 onChange={(e) => {
@@ -102,6 +113,7 @@ export default function contact({ contactContent }) {
               <textarea
                 placeholder="Message"
                 name="message"
+                value={change.message}
                 className="form-input full"
                 onChange={(e) => {
                   onChange(e);

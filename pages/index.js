@@ -25,10 +25,7 @@ export default function Home({ homeContent }) {
     const newArr = array1.concat(array2);
     const newState = [...new Set(newArr)];
     setArr(newState);
-    setClicked(true);
-    if (clicked) {
-      toast.error("You've already pushed that!!");
-    }
+    clicked ? toast.warn("You already pushed that") : setClicked(true);
   };
 
   return (
