@@ -8,12 +8,20 @@
 }
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #222222;
 }
 /* Navbar styles*/
-header {
-  height: 15vh;
+.home-header {
+  height: 20vh;
   width: 100%;
-  padding: 0 10vh;
+  padding: 0 10vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact-header {
+  height: 20vh;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,11 +32,252 @@ header {
   color: #debf79;
   text-decoration: none;
 }
+.nav-left {
+  width: 50%;
+  height: inherit;
+  padding: 0 10vw;
+  display: flex;
+  align-items: center;
+}
+.nav-right {
+  width: 50%;
+  height: inherit;
+  padding: 0 10vw;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+@media (max-width: 500px) {
+  header {
+    height: 10vh;
+  }
+  .logo {
+    height: 30px;
+  }
+  .logo-cont {
+    height: 30px;
+  }
+}
 
-/*Home Styles*/
+/*Home Page Styles*/
 
 .home {
-  height: 100vh;
-  width: 100%;
+  height: auto;
   background-color: #222222;
+}
+
+.card-con {
+  width: 90vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  height: 45vh;
+  width: 25vw;
+  margin-right: 2vw;
+  padding: 0 75px;
+  background-color: white;
+  border-radius: 5px;
+}
+.card:last-child {
+  margin-right: 0;
+}
+.img-con {
+  width: 100%;
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+}
+.img-con-rabbit {
+  width: 100%;
+  margin-top: 3.25vh;
+  margin-bottom: 5vh;
+  display: flex;
+  justify-content: center;
+}
+.heading-title {
+  margin-top: 2vh;
+  font-size: 2.3rem;
+  text-align: left;
+  color: #222222;
+}
+.card-disc {
+  margin-top: 2vh;
+  color: #858585;
+}
+.learn-more-con {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.learn-more {
+  width: 150px;
+  height: 50px;
+  margin-top: 3vh;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #debf79;
+  border: 0;
+  border-radius: 0;
+}
+
+@media (max-width: 1800px) {
+  .card-con {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+  }
+  .card {
+    margin-top: 2vh;
+    margin-right: 0;
+    height: 50vh;
+  }
+  .img-con-rabbit {
+    margin-bottom: 2vh;
+  }
+}
+@media (max-width: 1600px) {
+  .card {
+    width: 40%;
+  }
+}
+@media (max-width: 1150px) {
+  .card {
+    width: 60%;
+  }
+}
+@media (max-width: 800px) {
+  .card {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .card-con {
+    width: 100vw;
+    margin-top: 2vh;
+  }
+  .card {
+    width: 93%;
+    height: 60vh;
+    margin-right: 0;
+  }
+  .heading-one {
+    font-size: 1.5rem;
+  }
+}
+.challenge-con {
+  margin: 5vw 10vw;
+}
+.heading-one {
+  font-size: 3rem;
+  color: white;
+}
+.underline {
+  border-bottom: #debf79 solid 4px;
+}
+.challenge-disc {
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  text-align: justify;
+}
+.challenge-link {
+  color: #debf79;
+}
+/* Contact Page Styles */
+
+.contact-con {
+  display: flex;
+}
+.text-side {
+  width: 50%;
+  height: 80vh;
+}
+.form-side {
+  width: 50%;
+  height: 80vh;
+  background-color: white;
+}
+.contact-text-con {
+  width: 30vw;
+  color: white;
+  margin: 20vh 10vw;
+}
+.heading-two {
+  display: inline;
+  font-size: 3rem;
+  border-bottom: #debf79 solid 4px;
+}
+.form-con {
+  width: 40vw;
+  margin: 10vh auto 0 auto;
+}
+.heading-three {
+  font-size: 2.5rem;
+  color: #222222;
+}
+.form-input {
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+.half {
+  height: 5vh;
+  width: 47%;
+  padding: 0 2vw;
+  margin-right: 0.5vw;
+  margin-left: 0.5vw;
+  margin-top: 2vh;
+}
+.full {
+  width: 96%;
+  height: 20vh;
+  margin: 2vh 0.5vw 0 0.5vw;
+  padding: 1vh 2vw;
+  resize: none;
+  font-family: "Poppins", sans-serif;
+}
+.btn {
+  width: 150px;
+  height: 50px;
+  margin-top: 3vh;
+  font-size: 1.2rem;
+  color: white;
+  background-color: #debf79;
+  border: 0;
+  border-radius: 0;
+}
+@media (max-width: 1100px) {
+  .contact-con {
+    display: block;
+  }
+  .text-side {
+    width: 100%;
+    height: inherit;
+  }
+  .form-side {
+    width: 100%;
+    height: inherit;
+    padding-bottom: 5vh;
+  }
+  .nav-right {
+    background-color: #222222;
+  }
+  .contact-text-con {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .half {
+    width: 96%;
+  }
+  .form-con {
+    width: 100%;
+    padding-left: 2%;
+  }
+  .full {
+    height: 40vh;
+  }
 }
